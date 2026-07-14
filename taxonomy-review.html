@@ -27,7 +27,7 @@ h1{font-family:var(--serif);font-size:44px;line-height:1.05;margin:10px 0 6px;le
 .tldr li b{color:var(--ink)}
 .tldr li::before{content:"";position:absolute;left:0;top:14px;width:7px;height:7px;border-radius:50%;background:var(--acc)}
 h2{font-family:var(--serif);font-size:26px;margin:64px 0 6px;letter-spacing:-.01em}
-h2 + .sub{color:var(--faint);font-size:13.5px;margin:0 0 22px;max-width:70ch}
+h2 + .sub, details.sec > .sub{color:var(--faint);font-size:13.5px;margin:0 0 28px;max-width:70ch}
 h3{font-size:15px;margin:26px 0 8px}
 p{max-width:70ch}
 .settled{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:20px}
@@ -104,10 +104,10 @@ details.fulltree .ft-body{padding:8px 18px 22px;columns:3;column-gap:36px}
 .n3s{color:var(--faint);font-size:12px;margin-top:2px;line-height:1.5}
 .note{font-size:11.5px;margin-top:3px;padding-left:14px;line-height:1.45}
 .note.S,.note.V,.note.F{color:var(--soft)}
-.win{position:relative;padding:2px 0 2px 20px;margin:0 0 18px}
-.win::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--good)}
+.win{position:relative;padding:2px 0 2px 20px;margin:0 0 24px}
+.win::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--ink)}
 .win b{font-size:14.5px}
-.win p{margin:3px 0 0;color:var(--soft);font-size:13.5px}
+.win p{margin:5px 0 0;color:var(--soft);font-size:13.5px;max-width:none}
 table{border-collapse:collapse;width:100%;font-size:13px;margin-top:14px}
 th{font-family:var(--sans);font-size:10.5px;letter-spacing:.02em;text-transform:uppercase;color:var(--faint);text-align:left;font-weight:600;padding:8px 14px 8px 0;border-bottom:1px solid var(--ink)}
 td{padding:10px 14px 10px 0;border-bottom:1px solid var(--rule);vertical-align:top;font-size:13.5px}
