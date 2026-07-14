@@ -187,7 +187,11 @@ td .how{color:var(--faint);font-size:12px;margin-top:5px}
   if (!links.length) return;
   var secs = links.map(function(a){ return document.getElementById(a.getAttribute('data-t')); });
   links.forEach(function(a, i){ a.addEventListener('click', function(e){
-    e.preventDefault(); var d = secs[i]; if (d){ d.open = true; d.scrollIntoView({behavior:'smooth', block:'start'}); }
+    e.preventDefault(); var d = secs[i]; if (!d) return;
+    d.open = true;
+    var y = d.getBoundingClientRect().top + window.scrollY - 84;
+    window.scrollTo({top: y, behavior: 'smooth'});
+    setTimeout(function(){ if (Math.abs(window.scrollY - y) > 60) window.scrollTo(0, y); }, 700);
   }); });
   function upd(){
     var best = 0;
